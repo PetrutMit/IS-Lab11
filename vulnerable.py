@@ -14,6 +14,7 @@ def login():
     query = f"SELECT * FROM users WHERE username = '{user}' AND password = '{password}'"
     db.execute(query)
 
+# !HINT: Arguments can be passed in the URL
 @app.route("/comment")
 def comment():
     comment = request.args.get("text")
